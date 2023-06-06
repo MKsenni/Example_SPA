@@ -9,6 +9,7 @@
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
     "clear": "rd /s /q dist",
+    "deploy": "npm run build && npx gh-pages -d dist -e SPA",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -19,6 +20,7 @@
     "@babel/preset-env": "^7.22.4",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "image-webpack-loader": "^8.1.0",
@@ -34,7 +36,6 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "gh-pages": "^5.0.0"
+    "@babel/polyfill": "^7.12.1"
   }
 }
